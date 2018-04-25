@@ -1,0 +1,19 @@
+{
+  "name": "@gobum/sys",
+  "version": "0.0.1",
+  "description": "JavaScript system extension",
+  "license": "MIT",
+  "repository": "https://github.com/gobum/sys",
+  "files": [
+    "index.js",
+    "all.js"
+  ],
+  "scripts": {
+    "test": "npm run build && it test.js",
+    "build": "cat go.js > index.js && echo '\nmodule.exports = go.default = go;' >> index.js",
+    "pub": "npm run build && npm publish --access public"
+  },
+  "devDependencies": {
+    "@gobum/it": "0.0.2"
+  }
+}
